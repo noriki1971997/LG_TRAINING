@@ -1,8 +1,43 @@
 #include <iostream>
+#include "Figures.h"
+#include "FigIO.h"
 using namespace std;
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+void inputCircleData(istream &inDevice, Circle& cir)
+{
+	double Xo,Yo,r;
+	inDevice >> Xo >> Yo >> r;
+	cir.Set(Xo,Yo,r);
+}
+
+void outputCircleData(ostream &outDevice, Circle& cir)
+{
+	outDevice <<"+ Area: "<<cir.Area()<<endl;
+	outDevice <<"+ Perimeter: "<<cir.Perimeter()<<endl;
+}
+
+void testCase_2()
+{
+	Circle Cir;
+
+	cout<<"Input center and radius"<<endl;
+	inputCircleData(cin,Cir);
+	outputCircleData(cout,Cir);
+}
+
+void testCase_3()
+{
+	Circle Cir;
+	cin>>Cir;
+	cout<<Cir;
+}
+
 
 int main(int argc, char** argv) {
-	cout<<"Hello you"<<endl;
+	
+
+	testCase_3();
+	
+	
 	return 0;
 }

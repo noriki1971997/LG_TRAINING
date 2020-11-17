@@ -21,7 +21,7 @@ void Point2D::Scale(double sX,double sY)
 
 void Circle::Set(double Xo,double Yo, double radius)
 {
-	this->center(Xo,Yo);
+	this->center.Set(Xo,Yo);
 	this->radius = radius<0? 0:radius;
 }
 

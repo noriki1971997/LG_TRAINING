@@ -1,5 +1,5 @@
-#ifndef _FIGURE_H
-#define _FIGURE_H
+#ifndef _FIGURES_H
+#define _FIGURES_H
 
 #define PI 3.14
 class Point2D
